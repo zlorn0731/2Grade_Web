@@ -48,3 +48,20 @@
 </body>
 </html>
 ```
+
+#### 예제 3-2 : 본문 단락 구분
+- 코드 3-2 : text_paragraph.html
+```
+<!DOCTYPE html>
+<html>
+<head>
+        <title>HTML NEXT Basic Page</title>
+</head>
+<body>
+        <h1>제목 글자</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Phasellus eros nunc, aliquam nec faucibus vel, rutrum eu neque.</p>
+</body>
+</html>
+```
+pg 8부터
