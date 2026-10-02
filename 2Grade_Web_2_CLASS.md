@@ -16,18 +16,18 @@
 - 
 | 요소 구분 | 형태 | 예시 |
 |----------|-------|------|
-| 내용을 가질 수 있는 요소 | <요소 이름>내용</요소 이름> | <hl>Hello HTML5</hl>, <p>즐거운 웹 프로그래밍 입문</p> |
+| 내용을 가질 수 있는 요소 | <요소 이름>내용</요소 이름> | <h1>Hello HTML5</h1>, <p>즐거운 웹 프로그래밍 입문</p> |
 | 내용을 가질 수 없는 요소 | <요소 이름> | <img>, <br>, <hr> |
 - 내용을 가질 수 있는 요소 생성
 ```
-<hl>Hello HTML5</hl>
+<h1>Hello HTML5</h1>
   ↑시작 태그      ↑끝 태그
 ```
 - 
 | 내용 구분 | 예시 |
 |-----------|------|
-| 텍스트인 경우 | <h1>Hello HTML5</hl>, <p>즐거운 웹 프로그래밍 입문</p> |
-| 다른 태그인 경우 | <div>  <hl>Hello HTML5</hl> <p>즐거운 웹 프로그래밍 입문</p>  </div> |
+| 텍스트인 경우 | <h1>Hello HTML5</h1>, <p>즐거운 웹 프로그래밍 입문</p> |
+| 다른 태그인 경우 | <div>  <h1>Hello HTML5</h1> <p>즐거운 웹 프로그래밍 입문</p>  </div> |
 | 내용을 입력하지 않은 경우 | <dib></div>, <audio></audio>, <videa></video> | 
 - 참고 : HTML 표기법과 XHTML 표기법
   - 내용을 가질 수 없는 요소의 2가지 표기법
@@ -48,7 +48,7 @@
 ```
 [예시]
             ↓속성이름  ↓속성값
-(a)    <hl title="header">Hello HTML5</hl>
+(a)    <h1 title="header">Hello HTML5</h1>
         _____속성 블록____
 
             ↓속성이름  ↓속성값
@@ -59,7 +59,7 @@
 
 (a) title = 속성 이름
 (a) "header" = 속성 값
-(a) <hl title = "header"> = 속성 블록
+(a) <h1 title = "header"> = 속성 블록
 
 (b) src = 속성 이름
 (b) "image.png" = 속성 값
@@ -82,8 +82,8 @@
     <title>TITLE</title>
 </head>
 <body>
-    <!-- hl 태그 -->
-    <hl>Hello HTML5</hl>
+    <!-- h1 태그 -->
+    <h1>Hello HTML5</h1>
 </body>
 </html>
 ```
@@ -156,7 +156,7 @@
     <title>HTML5 Basic</title>
 </head>
 <body>
-    <hl>Hello World..!</h1>
+    <h1>Hello World..!</h1>
 </body>
 </html>
 
@@ -183,14 +183,14 @@
 <head>
     <title>HTML5 Basic</title>
     <style>________________________________________| head태그에 style태그 생성(h1 적용)
-              hl {                                 |
+              h1 {                                 |
                       color:white;                 |   
                       background:black;            |
               }                                    |
     </style>_______________________________________|  
 </head>
 <body>
-    <hl>Hello World..!</h1>_________________________ body태그에 제목 지정 (텍스트 입력)
+    <h1>Hello World..!</h1>_________________________ body태그에 제목 지정 (텍스트 입력)
 </body>
 </html>
 ```
@@ -198,12 +198,12 @@
 #### 예제 2-2 : 외부 스타일시트 작성과 실행
 - 코드 2-3 : Style.css
 ```
-hl {_____________________________| VS Code [파일]-[새 파일] style.css 파일 작성
-        color:white;             | head태그에 들어갈 style태그 작성(hl 적용)
+h1 {_____________________________| VS Code [파일]-[새 파일] style.css 파일 작성
+        color:white;             | head태그에 들어갈 style태그 작성(h1 적용)
         background:black;        |
 }________________________________|
 ```
-- 코드 2-4 : HTMLPageWithLink.html
+- 코드 2-4 : HTMLPageWith1ink.html
 ```
 <!DOCTYPE html>
 <html>
@@ -212,7 +212,7 @@ hl {_____________________________| VS Code [파일]-[새 파일] style.css 파�
           <link rel="stylesheet" href="Style.css"/>_______________ link태그 사용해 외부 스타일시트(style.css)를 불러오도록 head태그에 지정
 </head>                                                            (코드 2-2 변경하고 다른이름으로 저장)
 <body>                                                          /
-          <hl>Hello World..!</hl>______________________________/
+          <h1>Hello World..!</h1>______________________________/
 </body>
 </html>
 ```
@@ -237,7 +237,7 @@ hl {_____________________________| VS Code [파일]-[새 파일] style.css 파�
               </script>__________________________________________|
 </head>
 <body>
-              <hl>Hello World..!</hl>
+              <h1>Hello World..!</h1>
 </body>
 </html>
 ```
@@ -256,7 +256,7 @@ alert('OuterScript');_______________________ VS Code [파일]-[새 파일] Outer
               <script src='OuterJavaScript.js'></script>______________| (코드 2-5 변경하고 다른이름으로 저장)
 </head>
 <body>
-              <hl>Hello World..!</hl>
+              <h1>Hello World..!</h1>
 </body>
 </html>
 ```
