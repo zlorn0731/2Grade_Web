@@ -106,3 +106,256 @@
 </body>
 </html>
 ``` 
+
+#### 앵커 태그
+- 하이퍼텍스트(HyperText)
+  - 사용자의 선택에 따라 특정 정보로 이동할 수 있도록 조직된 문서
+- a 태그(Anchor)
+  - 다른 웹 페이지나 웹 페이지 내부의 특정 위치로 이동할 때 사용하는 태그
+  - a 태그만으로는 이동하는 웹 페이지를 브라우저에게 알려줄 수 없어 href 사용
+    - href(Hyper Reference)
+- 
+| 태그 | 설명 |
+|------|------|
+| a | 하이퍼링크 생성 |
+```
+<a href="http://www.hanbit.co.kr">한밫미디어</a>
+           [이동할 웹 페이지]       [출력 글자]
+```
+- a 태그의 href 속성
+  - (1) 절대 경로
+    - http://naver.com - 네이버의 메인 페이지
+    - /animal.jpg - 현재 웹 사이트 최상위 위치의 animal.jpg 파일
+  - (2) 상대 경로
+    - animal.jpg - 웹 페이지가 있는 폴더의 animal.jpg 파일
+    - image/animal.jpg - 웹 페이지가 있는 폴더에 포함된 image폴더의 animal.jpg 파일
+    - ../animal.jpg - 웹 페이지가 있는 폴더의 상위 폴더에 있는 animal.jpg 파일
+  - (3) 아이디 경로
+    - #name - id 속성이 name인 태그의 위치로 이동
+  - (4) 메일 경로
+    - maito : hanbit@hanbit.co.kr - 해당 주소로 메일 전송
+
+#### 예제 3-4 : 하이퍼링크 설정
+- 1. 특정 웹 페이지에 연결하기
+  - 하이퍼링크를 설정한 글자를 클릭하면 해당 웹 페이지로 이동
+- 코드 3-5 : text_anchor.html
+```
+<!DOCTYPE html>
+<html>
+<head>
+        <title>HTML TEXT Basic</title>
+</head>
+<body>
+        <a href="http://hanb.co.kr">한빛미디어</a><br />
+        <a href="http://naver.com"/>네이버</a><br />
+        <a href="http://daum.com/">다음</a><br />
+</body>
+</html>
+```
+- 2. 웹 페이지 내부에 연결하기
+  - 하이퍼링크를 설정한 글자를 클릭하면 해당 웹 페이지로 이동
+- 코드 3-6 : text_anchorlnner.html
+```
+<!DOCTYPE html>
+<html>
+<head>
+        <title>HTML TEXT Basic</title>
+</head>
+<body>
+        <a href="#alpha">Alpha 부분</a>
+        <a href="#beta">Beta 부분</a>
+        <a href="#gamma">Gamma 부분</a>
+        <hr />
+        <h1 id="alpha">Alpha</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h1 id="beta">Beta</h1>
+        <p>vivamus elementum dictum lobortis. Curabitur ut nunc turpis.</p>
+        <h1 id="gamma">Gamma</h1>
+        <p>Pharsellus eros nunc, aliquam nec faucibus vel, retrum eu neque.</p>
+</body>
+</html>
+```
+
+#### 글자 모양 태그
+- 글자 모양 태그
+  - 웹 페이지의 글자에 형태나 의미를 부여하는데 사용하는 태그
+- 
+| 태그 | 설명 |
+|------|------|
+| b | 굵은 글자 |
+| i | 기울어진 글자 |
+| small | 작은 글자 | 
+| sub | 아래 첨자 | 
+| sup | 위 첨자 | 
+| ins | 밑줄 글자 |
+| del | 취소선이 그어진 글자 |
+- 글자 모양 태그 내부에 제목 글자 태그와 본문 글자 태그는 넣을 수 없음
+  - (예시) : 웹 표준을 위반한 글자 모양 태그 사용
+```
+<i>
+      <h1>웹 표준 위반</h1>
+      <p>웹 표준 위반</p>
+</i>
+```
+
+#### 예제 3-5 : 다양한 글자 모양
+- 코드 3-7 : text_font.html
+```
+<!DOCTYPE html>
+<html>
+<head>
+        <title>HTML TEXT Basic Page</title>
+</head>
+<body>
+        <h1><b>Lorem ipsum dolor sit amet</b></h1>
+        <h1><i>Lorem ipsum dolor sit amet</i><h1>
+        <h1><small>Lorem ipsum dolor sit amet</small></h1>
+        <h1>Lorem ipsum dolor <sub> sit amet</sub></h1>
+        <h1>Lorem ipsum dolor <sup> sit amet</sup></h1>
+        <h1><ins>Lorem ipsum dolor sit amet</ins></h1>
+        <h1><del>Lorem ipsum dolor sit amet</del></h1>
+        <hr />
+        <b>Lorem ipsum dolor sit amet</b><br />
+        <i>Lorem ipsum dolor sit amet</i><br />
+        <small>Lorem ipsum dolor sit amet</small><br />
+        Lorem ipsum dolor <sub> sit amet</sub><br />
+        Lorem ipsum dolor <sup> sit amet</sup><br />
+        <ins>Lorem ipsum dolor sit amet</ins><br />
+        <del>Lorem ipsum dolor sit amet</del><br />
+</body>
+</html>
+```
+
+### 목록 태그
+
+#### 내비게이션 메뉴
+- 웹 사이트의 다른 웹 페이지로 이동할 수 있는 버튼
+- 목록 태그
+  - 내비게이션 메뉴를 만들기 위해 주로 사용되는 목록 태그
+- 
+| 태그 | 설명 |
+|------|------|
+| ul | 순서가 없는 목록 생성 |
+| ol | 순서가 있는 목록 생성 |
+| li | 목록 요소 생성 |
+
+#### 예제 3-6 : 목록 태그 활용
+- 1. 순서가 없는 기본(글머리 기호) 목록 만들기
+- 코드 3-8 : list_unordered.html
+```
+<!DOCTYPE html>
+<html>
+<head>
+          <title>HTML List Basic Page</title>
+</head>
+<body>
+      <ul>
+            <li>사과</li>
+            <li>바나나</li>
+            <li>오렌지</li>
+       </ul>
+</body>
+</html>
+````
+- 2. 순서가 있는 목록 만들기
+- 코드 3-9 : list_ordered.html
+```
+<!DOCTYPE html>
+<html>
+<head>
+          <title>HTML List Basic Page</title>
+</head>
+<body>
+        <ol>
+              <li>사과</li>
+              <li>바나나</li>
+              <li>오렌지<li>
+        </ol>
+</body>
+</html>
+```
+- 3. 중첩 목록 만들기
+- 코드 3-10 : nested_list.html
+```
+<body>
+    <ul>
+        <!-- 첫 번째 목록 -->
+        <li>
+            <b>과일</b>____________________________ 첫 번째 목록 유형 항목
+            <ol>
+                <li>사과</li>
+                <li>바나나</li>
+                <li>오렌지</li>
+            </ol>
+        </li>
+        <!-- 두 번째 목록 -->
+        <li>
+            <b>채소</b>____________________________ 두 번째 목록 유형 항목
+            <ol>
+                <li>상추</li>
+                <li>치커리</li>
+                <li>양배추</li>
+            </ol>
+        </li>
+    </ul>
+</body>
+```
+
+#### 테이블 태그
+- 표를 만들 때는 테이블 태그
+- 
+| 태그 | 설명 |
+|------|------|
+| table | 표 삽입 |
+| tr | 표에 행 삽입 |
+| th | 표의 제목 셀 생성 | 
+| td | 표의 일반 셀 생성 |
+
+#### 예제 3-7 : 시간표 만들기
+- 1. 표 만들기
+- 코드 3-11 : table_basic.html
+```
+<body>
+      <table>
+
+      </table>
+</body>
+```
+- 2. 표에 셀 추가하기
+- 코드 3-12 : table_basic.html
+```
+<body>
+        <table border="1">_________ border : 표 테두리 두께
+              <thead>_________________________________________| 제목 행과 제목 셀 생성
+                  <tr>                                        |
+                      <th></th>                               |
+                      <th>월</th>                             |
+                      <th>화</th>                             |
+                      <th>수</th>                             |   
+                      <th>목</th>                             |   
+                      <th>금</th>                             |
+                  </tr>                                       |
+                </thead>______________________________________|
+
+            <tbody>_________________________________________________| 일반 행과 일반 셀 생성
+                <tr>                                                |
+                      <td>1교시</td>                                |
+                      <td>영어</td>                                 |
+                      <td>국어</td>                                 |
+                      <td>과학</td>                                 | 
+                      <td>미술</td>                                 |
+                      <td>기술</td>                                 | 
+                </tr>                                               |
+                <tr>                                                | 
+                      <td>2교시</td>                                |
+                      <td>도덕</td>                                 |
+                      <td>체육</td>                                 | 
+                      <td>영어</td>                                 |   
+                      <td>수학</td>                                 |
+                      <td>사회</td>                                 |
+                  </tr>                                             |
+              </tbody>______________________________________________|
+            </table>
+</body>
+```
+pg 26부터
