@@ -419,4 +419,66 @@
 |   | controls | 음악, 비디오 재생 도구 출력 여부 지정 |
 | video | width | 비디오의 너비 지정 |
 | <video></video> | height | 비디오의 높이 지정 |
-pg 31 부터
+
+#### 예제 3-9 : 멀티미디어(이미지, 오디오, 비디오) 삽입
+- 1. 이미지 삽입하기
+  - 이미지 파일 준비 : 준비 파일(이미지.jpg)을 HTML페이지와 같은 폴더에 넣기
+  - 코드 3-14 : image_basic.html
+```
+<body>
+      <img src="Penguins.jpg" alt="펭귄" width="300"/>_________________ 웹에 있는 이미지 경로를 넣어도 됨 | <img src="http://www.hanbit.co.kr/images/common/logo_hanbit.png">
+                                    ↳ 이미지 파일 : Penguins.jpg / 대체 문구 : 펭귄 / 이미지 너비 : 300 pixel
+      <img src="Nothing" alt="그림이 존재하지 않습니다." width="300"/>__________________ 이미지가 없으면 alt 속성에 지정한 글자가 표시됨
+</body>
+```
+- 2. 음악 삽입하기
+  - 음악 파일 준비 : 준비 파일(오디오.mp3)을 HTML페이지와 같은 폴더에 넣기
+  - 코드 3-15 : audio_basic.html
+```
+<body>
+        <audio src="Kalimba.mp3" controls="controls"></audio>
+</body>
+```
+- 3. 웹 브라우저 제약이 없도록 음악 삽입하기
+  - <source> 태그
+  - 웹 브라우저마다 지원하는 음악 파일 확장자가 다른 문제 해결
+  - <audio> 태그나 <video> 태그 내부에 입력
+  - ogg파일 준비 : .ogg 확장자 파일을 HTML페이지와 같은 폴더에 넣기
+  - 코드 3-16 : audio_source.html
+```
+<body>
+        <audio controls="controls">____________________________________| type속성을 입력하지 않을 경우, 웹 브라우저가 음악파일 다운로드 후 재생가능 파일인지 확인하는
+              <source src="Kalimba.mp3" type="audio/mp3" />            | 작업이 필요하므로 반드시 지정
+              <source src="Kalimba.ogg" type="audio/ogg" />            |
+        </audio>_______________________________________________________|
+</body>
+```
+- 4. 동영상 삽입하기
+  - 동영상 파일 준비 : 준비 파일(동영상.mp4, 동영상.webm)을 HTML페이지와 같은 폴더에 넣기
+  - 코드 3-17 : video_basic.html
+```
+<body>
+        <video width="640" controls="controls">
+              <source src="wildlife.mp4" type="video/mp4" />
+              <source src="wildlife.webm" type="video/webm" />
+        </video>
+</body>
+```
+- 5. 동영상을 불러오는 동안 다른 이미지 보여 주기
+  - poster 속성
+    - <video>태그의 속성
+    - 동영상을 불러오는 동안 사용자에게 보여 줄 이미지를 지정
+    - 이미지 경로 입력 넣기
+  - 코드 3-18 : video_poster.html
+```
+<body>
+        <video controls="controls" poster="https://placketittens.com/300/300">
+              <source src="wildlife.mp4" type="video/mp4">
+              <source src="wildlife.webm" type="video/webm">
+        </video>
+</body>
+```
+
+##### ✍️작성자: 박지안
+##### 🐧실습 환경: Visual Studio Code
+##### 🗓️ 작업일: 2026-10-06
