@@ -282,4 +282,113 @@
 | div | 블록 형식으로 공간 분할 |
 | span | 인라인 형식으로 공간 분할 |
 
-pg23 부터
+#### 예제 4-5 : 공간 분할 방법
+- 1. 공간을 블록 형식으로 분할하기
+- (코드 4-9) space_block.html
+```
+<body>
+  <div>div 태그 - block 형식</div>
+  <div>div 태그 - block 형식</div>
+  <div>div 태그 - block 형식</div>
+  <div>div 태그 - block 형식</div>  
+  <div>div 태그 - block 형식</div>
+</body>
+```
+- 2. 공간을 인라인 형식으로 분할하기
+  - 자신의 글자 크기만큼 영역 차지
+  - 왼쪽에서 오른쪽으로 쌓임
+- (코드 4-10) space_inline.html
+```
+<body>
+  <span>span 태그 - inline 형식</span>
+  <span>span 태그 - inline 형식</span>
+  <span>span 태그 - inline 형식</span>
+  <span>span 태그 - inline 형식</span>
+  <span>span 태그 - inline 형식</span>
+</body>
+```
+
+#### 참고 : 블록 형식 태그와 인라인 형식 태그
+- 블록 형식과 인라인 형식이 적용된 일반 태그
+  - h1태그, p태그는 블록 형식으로 출력
+  - a태그와 i태그는 인라인 형식으로 출력
+- (예시) reference_otherDisplayTag.html
+```
+<!DOCTYPE html>
+<head>
+  <title>HTML Space Basic Page</title>
+</head>
+<body>
+  <h1>h1 태그</h1>
+  <p>p 태그</p>
+  <hr>
+  <a href="#">a 태그</a>
+  <i>i 태그</i>
+</body>
+</html>
+```
+
+#### 시맨틱 태그
+- 시맨틱(semantic) 웹
+  - 컴퓨터 프로그램이 코드를 읽고 의미를 인식할 수 있는 지능형 웹
+    - semantic : '의미론적인'의 의미
+    - 시맨틱 태그 : 웹 페이지의 태그에 의미를 부여하는 태그
+- 시맨틱 태그를 사용한 시맨틱 웹 구현
+  - HTML5의 시맨틱 태그
+- 
+| 태그 | 설명 |
+|------|------|
+| (1)header | 머리말(페이지 제목, 페이지 소개) |
+| (2) nav | 하이퍼링크들을 모아 둔 내비게이션 |
+| (3) aside | 본문 흐름에 벗아나는 노트나 팁 |
+| (4) section | 문서의 장이나 절에 해당하는 내용 |
+| (5) article | 본문과 독립적인 콘텐츠 영역 |
+| (6) footer | 꼬리말(저자나 저작권 정보) |
+```
+______________________________________________
+|                   (1)<header>              |
+|____________________________________________|
+|                   (2)<nav                  |
+|____________________________________________|
+|         |      (4)<section>      |         |
+|         |   ____[<article>]____  |         | 
+| <aside> |   |   [<article>]   |  | <aside> |
+|         |(5)|   [<article>]   |  |         |
+|         |   |_________________|  |         |
+|____________________________________________|
+|                   (6)<footer>              |
+|____________________________________________|
+```
+
+#### 예제 4-6 : 시맨틱 태그를 이용해 레이아웃 구성
+- (코드 4-12) space_semanticLess.html
+```
+<body>
+  <div>
+    <h1>HTML5 기본</h1>
+  </div>
+  <div>
+    <ul>
+      <li><a href="#">메뉴 - 1</a></li>
+      <li><a href="#">메뉴 - 2</a></li>
+      <li><a href="#">메뉴 - 3</a></li>
+    </ul>
+  </div>
+    <div>
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+    <div>
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+  </div>
+  <div>
+      <span>서울특별시 강서구 내발산동</span>
+  </div>
+</body>
+
+div 태그를 사용한 웹 페이지의 레이아웃 구성
+```
+- (코드 4-13) space_semantic.html
+  29페이지 마무리 요함
