@@ -391,4 +391,35 @@ ______________________________________________
 div 태그를 사용한 웹 페이지의 레이아웃 구성
 ```
 - (코드 4-13) space_semantic.html
-  29페이지 마무리 요함
+```
+<body>
+  <header>
+    <h1>HTML5 기본</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">메뉴 - 1</a></li>
+      <li><a href="#">메뉴 - 2</a></li>
+      <li><a href="#">메뉴 - 3</a></li>
+    </ul>
+  </nav>
+  <section>
+    <article>
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </article>
+    <article>
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </article>
+  </section>
+  <footer>
+    <address>서울특별시 강서구 내발산동</address>
+  </footer>
+</body>
+
+시맨틱 태그를 사용한 웹 페이지의 레이아웃 구성
+```
+
+##### ✍️작성자: 박지안
+##### 🗓️ 작업일: 2026-10-17
